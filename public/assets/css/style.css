@@ -3,7 +3,7 @@ body {
 	background: yellow;
 }
 
-/*Formatting the burger img*/
+/*Burger icon*/
 #burger-img {
 	max-width: 200px;
 	margin-top: 20px;
@@ -33,7 +33,7 @@ body {
     border-radius: 5px;
  }
 
-/*gre out devoured burgers*/
+/*style the devoured ones differently*/
 #devoured {
 	color: #98978b;
 	/*background-color: #f8f5f0;*/
