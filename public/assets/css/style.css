@@ -1,6 +1,6 @@
 /*Changing the background color*/
 body {
-	background: #29abe0;
+	background: yellow;
 }
 
 /*Formatting the burger img*/
@@ -11,21 +11,21 @@ body {
 
 
 /*Applying Google fonts*/
-#burger-h {
-	font-family: 'Ravi Prakash', cursive;
+#burger-header {
+	font-family: 'Shrikhand', cursive;
 	font-size: 60px;
 }
 
 .burger-text {
-	font-family: 'Love Ya Like A Sister', cursive;
+	font-family: 'Shrikhand', cursive;
 }
 
 .burger-btn {
-	font-family: 'Rock Salt', cursive;
+	font-family: 'Shrikhand', cursive;
 }
 
 
-/*"Muting" the devoured burgers*/
+/*gre out devoured burgers*/
 #devoured-text {
 	color: #98978b;
 	background-color: #f8f5f0
