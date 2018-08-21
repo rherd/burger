@@ -22,6 +22,7 @@ body {
 
 .burger-btn {
 	font-family: 'Shrikhand', cursive;
+	margin-bottom: 15px;
 }
 
 
@@ -33,7 +34,7 @@ body {
 
 
 /*Formatting the divs holding burger lists*/
-.uneaten-list, .eaten-list {
+.uneaten, .eaten {
 	max-height: 300px;
 	overflow-y:auto;
 }
