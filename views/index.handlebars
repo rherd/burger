@@ -16,38 +16,34 @@
 		</div>
 
 		<div class="col-md-5 uneaten">
-			{{#each burger}}
-				{{#unless this.devoured}}
-					<div class="row">
-						<div class="col-md-8">
-							<div class="panel panel-default">
-								<div class="burger-text burger-entries panel-body">
-									{{this.id}}. {{this.burger_name}}
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-4">
-							<form action="/{{this.id}}?_method=PUT" method="POST">
-			          			<input type="hidden" name="devoured" value="true">
-			          			<button type="submit" class="burger-btn btn btn-success">Devour it!</button>
-			        		</form>
-					    </div>
-			        </div>
-			    {{/unless}}
-			{{/each}}
-		</div>
-
-		<div class="col-md-3 eaten">
-			{{#each burger}}
-				{{#if this.devoured}}
+			{{#each burger}} {{#unless this.devoured}}
+			<div class="row">
+				<div class="col-md-8">
 					<div class="panel panel-default">
-						<div class="burger-text panel-body" id="devoured">
+						<div class="burger-text burger-entries panel-body">
 							{{this.id}}. {{this.burger_name}}
 						</div>
 					</div>
-				{{/if}}
-			{{/each}}
+				</div>
+
+				<div class="col-md-4">
+					<form action="/{{this.id}}?_method=PUT" method="POST">
+						<input type="hidden" name="devoured" value="true">
+						<button type="submit" class="burger-btn btn btn-success">Devour it!</button>
+					</form>
+				</div>
+			</div>
+			{{/unless}} {{/each}}
+		</div>
+
+		<div class="col-md-3 eaten">
+			{{#each burger}} {{#if this.devoured}}
+			<div class="panel panel-default">
+				<div class="burger-text panel-body" id="devoured">
+					{{this.id}}. {{this.burger_name}}
+				</div>
+			</div>
+			{{/if}} {{/each}}
 		</div>
 
 		<div class="col-md-2">
@@ -58,18 +54,18 @@
 		<div class="col-md-3">
 		</div>
 
-{{!-- use action on form instead of jquery --}}
+		{{!-- use action on form instead of jquery --}}
 		<div class="col-md-6">
 			<form class="create-update-form" action="/" method="POST">
 				<div class="form-group">
-			  		<label class="burger-text control-label" for="focusedInput">Your burger:</label>
+					<label class="burger-text control-label" for="focusedInput">Your burger:</label>
 					<input class="burger-text form-control" id="focusedInput" type="text" placeholder="Burger order..." name="burger_name">
 				</div>
-				
+
 				<div class="form-group">
-			    	<button type="submit" class="burger-btn btn btn-warning center-block">Submit</button>
-		    	</div>
-		  	</form>
+					<button type="submit" class="burger-btn btn btn-warning center-block">Submit</button>
+				</div>
+			</form>
 		</div>
 
 		<div class="col-md-3">
